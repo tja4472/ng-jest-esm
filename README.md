@@ -1,5 +1,11 @@
 # NgJestEsm
 
+ng new ng-jest-esm
+
+https://thymikee.github.io/jest-preset-angular/
+
+https://angularexperts.io/blog/total-guide-to-jest-esm-and-angular
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
 ## Development server
