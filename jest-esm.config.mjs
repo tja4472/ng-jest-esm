@@ -10,7 +10,10 @@ const jestConfig = {
   moduleNameMapper: {
     tslib: 'tslib/tslib.es6.js',
     rxjs: '<rootDir>/node_modules/rxjs/dist/bundles/rxjs.umd.js',
+    'rxfile/auth': '<rootDir>/node_modules/rxfire/auth/index.esm.js',    
   },
+  // transformIgnorePatterns: ['node_modules/(?!(rxfile/auth))'],
+  setupFiles: ['./jest.polyfills.js'],  
   setupFilesAfterEnv: ['<rootDir>/setup-jest-esm.ts'],
   transform: {
     '^.+\\.(ts|js|html|svg)$': [
@@ -22,6 +25,9 @@ const jestConfig = {
       },
     ],
   },
+  resolver: '<rootDir>/jest-resolver.js',
+  // testEnvironment: 'jsdom',  
+  globals: { TextEncoder: TextEncoder, TextDecoder: TextDecoder },  
 };
 
 export default jestConfig;
